@@ -14,12 +14,11 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const subtitle = document.querySelector('h2.subtitle')
 
-    window.addEventListener('offline', function (e) {
-        subtitle.textContent = 'You are ONLINE and this page came from Server'
-    })
-    window.addEventListener('online', function (e) {
-        subtitle.textContent = 'You are OFFLINE and this page came from Service Worker'
-    })
+    const changeSubtitle = () => {
+        subtitle.textContent = `You are ${navigator.onLine ? 'ONLINE' : 'OFFLINE'} and this page came from ${navigator.onLine ? 'Server' : 'Service Worker'}`
+    }
+    window.onoffline = changeSubtitle
+    window.ononline = changeSubtitle
 
-    subtitle.textContent = `You are ${navigator.onLine ? 'ONLINE' : 'OFFLINE'} and this page came from ${navigator.onLine ? 'Server' : 'Service Worker'}`
+    subtitle.textContent = `You are ${navigator.onLine ? 'ONLINE' : 'OFFLINE'} and this page came from ${navigator.onLine ? 'Server' : 'Service Worker'}`    
 })

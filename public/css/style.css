@@ -1,0 +1,38 @@
+body {
+    background-color: #111111;
+    color: white;
+}
+
+div.container {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #212121;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.title, .subtitle {
+    text-align: center;
+}
+
+h1.title {
+    font-size: 3em;
+}
+
+p.paragraph {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+img.image {
+    display: block;
+    margin: 0 auto;
+    max-width: 512px;
+}
+
+figure figcaption {
+    text-align: center; margin-top: 10px;
+ }
